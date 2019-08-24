@@ -1,7 +1,7 @@
 function Button(props) {
 	
   //const handleClick = () => setCounter(counter + 1);
-  // increase counter
+  // increase counter by 1
 	return (
   	<button onClick = {props.onClickFunction}>
     	+1
