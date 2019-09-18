@@ -28,13 +28,13 @@ class App extends Component {
     // ];
     //console.log("button clicked");
   }
-
+  // arrow functions not recommended for button onclick, bind is better
   render() {
     return (
       <div className="App">
         <h1>I'm an App</h1>
         <p>this is working</p>
-        <button onClick = {this.switchNameHandler.bind(this,"ravipvyas")}> Switch Names </button>
+        <button onClick = {() => this.switchNameHandler("ravipvyas")}> Switch Names </button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
         <Person 
           name={this.state.persons[1].name} 
