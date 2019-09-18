@@ -19,7 +19,16 @@ class App extends Component {
       {name: "Melissa", age: 24}
       ] 
     });
-
+  }
+  nameChangeHandler = (event) => {
+    this.setState({
+      persons : [
+      {name: "Ravi", age: 28},
+      {name: event.target.value, age: 31},
+      {name: "Melissa", age: 24}
+      ] 
+    });
+  }  
     // Don't do this 
     // this.state.persons = [
     //   {name: "Melissa", age: 24},
@@ -27,8 +36,8 @@ class App extends Component {
     //   {name: "Aditya", age: 31}
     // ];
     //console.log("button clicked");
-  }
-  // arrow functions not recommended for button onclick, bind is better
+ 
+  // arrow functions not recommended for button onclick, bind is better for performance
   render() {
     return (
       <div className="App">
@@ -39,7 +48,8 @@ class App extends Component {
         <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age} 
-          click={this.switchNameHandler.bind(this,"rpvyas")} >MyHobbies : News
+          click={this.switchNameHandler.bind(this,"rpvyas")}
+          change={this.nameChangeHandler} >MyHobbies : News
         </Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
       </div>
