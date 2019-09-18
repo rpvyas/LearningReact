@@ -39,11 +39,19 @@ class App extends Component {
  
   // arrow functions not recommended for button onclick, bind is better for performance
   render() {
+    const style = {
+      font: 'inherit',
+      bordor: '1px solid blue',
+      padding: '8px',
+      backgroundColor: 'white',
+      cursor: 'pointer'
+    };
+
     return (
       <div className="App">
         <h1>I'm an App</h1>
         <p>this is working</p>
-        <button onClick = {() => this.switchNameHandler("ravipvyas")}> Switch Names </button>
+        <button style={style} onClick = {() => this.switchNameHandler("ravipvyas")}> Switch Names </button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
         <Person 
           name={this.state.persons[1].name} 
