@@ -65,7 +65,8 @@ class App extends Component {
       font: 'inherit',
       bordor: '1px solid blue',
       padding: '8px',
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       cursor: 'pointer'
     };
 
@@ -92,6 +93,8 @@ class App extends Component {
           <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/> */}
         </div> 
       );
+
+      style.backgroundColor = 'red';
     }
 
 
